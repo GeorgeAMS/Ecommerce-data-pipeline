@@ -1,7 +1,7 @@
 from api.extract_products import extract_products
 from etl.transform_products import transform_products
 from etl.load_products import load_products
-from etl.generate_customers import generate_customers
+from etl.generate_customers import generate_costumers
 
 # 1 extraer
 df = extract_products()
@@ -11,4 +11,4 @@ df = transform_products(df)
 
 # 3 cargar
 load_products(df)
-generate_customers()
+generate_costumers()
