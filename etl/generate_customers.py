@@ -13,7 +13,7 @@ cities = [
     "Bello", "San Andres Islas", "Ure"
 ]
 
-def generate_costumers():
+def generate_customers():
     conn = psycopg2.connect(
         host="localhost",
         database="ecommerce_pipeline",
@@ -29,7 +29,7 @@ def generate_costumers():
         country = "Colombia"
 
         days_ago = random.randint(1,365)
-        reg_date = datetime.today - timedelta(days=days_ago)
+        reg_date = datetime.today() - timedelta(days=days_ago)
 
         cur.execute(
             """
